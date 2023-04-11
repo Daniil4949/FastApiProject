@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Body
+from fastapi import APIRouter, Body, Request
 from database.db import *
 from models.student import *
 
@@ -9,7 +9,7 @@ router = APIRouter(
 
 
 @router.get("/", response_description="Students retrieved", response_model=Response)
-async def get_students():
+async def get_students(request: Request):
     students = await retrieve_students()
     return {
         "status_code": 200,

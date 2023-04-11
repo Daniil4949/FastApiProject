@@ -8,6 +8,7 @@ fastapi = "*"
 uvicorn = "*"
 beanie = "*"
 pydantic = {extras = ["email"], version = "*"}
+kafka-python = "*"
 
 [dev-packages]
 
